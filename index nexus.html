@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexusVPN — Fast, Private & Secure Access Anywhere</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ===== HEADER / NAVBAR ===== -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon">&#9670;</span>
+                Nexus<span class="logo-highlight">VPN</span>
+            </a>
+            <nav class="nav-links" id="navLinks">
+                <a href="#features">Features</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#locations">Locations</a>
+            </nav>
+            <button class="btn btn-primary nav-cta">Get Started</button>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#features">Features</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#locations">Locations</a>
+            <button class="btn btn-primary mobile-cta">Get Started</button>
+        </div>
+    </header>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">&#9733; #1 Rated VPN 2024</div>
+                <h1>Fast, Private &amp; Secure<br><span class="gradient-text">Access Anywhere</span></h1>
+                <p class="hero-subtitle">
+                    Browse the internet with complete anonymity. 256-bit encryption,
+                    zero-logs policy, and lightning-fast servers in 94+ countries.
+                </p>
+                <div class="hero-ctas">
+                    <button class="btn btn-primary btn-lg">&#9654; Start Your Free Trial</button>
+                    <button class="btn btn-outline btn-lg">See Plans</button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">10M+</span>
+                        <span class="stat-label">Users</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">94</span>
+                        <span class="stat-label">Countries</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">99.9%</span>
+                        <span class="stat-label">Uptime</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <!-- Connection Card Widget -->
+                <div class="connection-card" id="connectionCard">
+                    <div class="card-header">
+                        <span class="card-title">VPN Connection</span>
+                        <span class="card-status" id="cardStatusBadge">Disconnected</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="status-indicator" id="statusIndicator">
+                            <div class="power-ring" id="powerRing">
+                                <div class="power-ring-inner"></div>
+                            </div>
+                            <button class="power-btn" id="powerBtn" aria-label="Toggle VPN connection">
+                                &#9654;
+                            </button>
+                        </div>
+                        <div class="connection-info">
+                            <div class="info-row">
+                                <span class="info-label">Status</span>
+                                <span class="info-value" id="statusText">Disconnected</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">IP Address</span>
+                                <span class="info-value mono" id="ipDisplay">—</span>
+                            </div>
+                            <div class="info-row">
+                                <span class="info-label">Server</span>
+                                <div class="server-select-wrapper">
+                                    <select id="serverSelect" class="server-select">
+                                        <option value="United States">&#127482;&#127480; United States</option>
+                                        <option value="United Kingdom">&#127468;&#127463; United Kingdom</option>
+                                        <option value="Japan">&#127471;&#127477; Japan</option>
+                                        <option value="Germany">&#127465;&#127466; Germany</option>
+                                        <option value="Canada">&#127464;&#127462; Canada</option>
+                                        <option value="Australia">&#127462;&#127470; Australia</option>
+                                    </select>
+                                    <span class="select-arrow">&#9662;</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="speed-bar">
+                            <span class="speed-label">Connection Speed</span>
+                            <div class="speed-track">
+                                <div class="speed-fill" id="speedFill"></div>
+                            </div>
+                            <span class="speed-value" id="speedValue">0 Mbps</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FEATURES GRID ===== -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose <span class="gradient-text">NexusVPN</span>?</h2>
+                <p>Enterprise-grade security with consumer-friendly simplicity</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                            <path d="M2 17l10 5 10-5"/>
+                            <path d="M2 12l10 5 10-5"/>
+                        </svg>
+                    </div>
+                    <h3>256-Bit Encryption</h3>
+                    <p>Military-grade AES-256 encryption protects your data with the same standard used by governments and security agencies worldwide.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <h3>No-Logs Policy</h3>
+                    <p>We never track, store, or share your browsing data. Our independently audited zero-logs policy guarantees your privacy.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
+                    </div>
+                    <h3>Ultra-Fast Servers</h3>
+                    <p>10 Gbps infrastructure with optimized routing delivers buffer-free streaming, lag-free gaming, and instant page loads.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PRICING SECTION ===== -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>Simple, Transparent <span class="gradient-text">Pricing</span></h2>
+                <p>No hidden fees. Cancel anytime.</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Monthly</h3>
+                    <div class="price">
+                        <span class="currency">$</span>
+                        <span class="amount">12.99</span>
+                        <span class="period">/mo</span>
+                    </div>
+                    <ul class="price-features">
+                        <li>&#10003; 94+ Server Locations</li>
+                        <li>&#10003; 256-bit Encryption</li>
+                        <li>&#10003; No-Logs Guarantee</li>
+                        <li>&#10003; 5 Simultaneous Devices</li>
+                    </ul>
+                    <button class="btn btn-outline btn-full">Get Monthly</button>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="popular-badge">Most Popular</div>
+                    <h3>Yearly</h3>
+                    <div class="price">
+                        <span class="currency">$</span>
+                        <span class="amount">6.99</span>
+                        <span class="period">/mo</span>
+                    </div>
+                    <div class="price-note">Billed $83.88/year — Save 46%</div>
+                    <ul class="price-features">
+                        <li>&#10003; 94+ Server Locations</li>
+                        <li>&#10003; 256-bit Encryption</li>
+                        <li>&#10003; No-Logs Guarantee</li>
+                        <li>&#10003; 10 Simultaneous Devices</li>
+                        <li>&#10003; 30-Day Money-Back</li>
+                        <li>&#10003; Priority Support</li>
+                    </ul>
+                    <button class="btn btn-primary btn-full">Get Yearly</button>
+                </div>
+                <div class="pricing-card">
+                    <h3>Two Years</h3>
+                    <div class="price">
+                        <span class="currency">$</span>
+                        <span class="amount">4.99</span>
+                        <span class="period">/mo</span>
+                    </div>
+                    <div class="price-note">Billed $119.76 — Save 62%</div>
+                    <ul class="price-features">
+                        <li>&#10003; 94+ Server Locations</li>
+                        <li>&#10003; 256-bit Encryption</li>
+                        <li>&#10003; No-Logs Guarantee</li>
+                        <li>&#10003; Unlimited Devices</li>
+                        <li>&#10003; 30-Day Money-Back</li>
+                        <li>&#10003; Priority Support</li>
+                        <li>&#10003; Dedicated IP Option</li>
+                    </ul>
+                    <button class="btn btn-outline btn-full">Get Two Years</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== LOCATIONS / GLOBAL MAP ===== -->
+    <section class="locations" id="locations">
+        <div class="container">
+            <div class="section-header">
+                <h2>Global Server <span class="gradient-text">Network</span></h2>
+                <p>94+ countries · 1,800+ servers · Unlimited bandwidth</p>
+            </div>
+            <div class="locations-grid">
+                <div class="location-card">
+                    <span class="location-flag">&#127482;&#127480;</span>
+                    <span class="location-name">United States</span>
+                    <span class="location-count">24 servers</span>
+                </div>
+                <div class="location-card">
+                    <span class="location-flag">&#127468;&#127463;</span>
+                    <span class="location-name">United Kingdom</span>
+                    <span class="location-count">12 servers</span>
+                </div>
+                <div class="location-card">
+                    <span class="location-flag">&#127471;&#127477;</span>
+                    <span class="location-name">Japan</span>
+                    <span class="location-count">8 servers</span>
+                </div>
+                <div class="location-card">
+                    <span class="location-flag">&#127465;&#127466;</span>
+                    <span class="location-name">Germany</span>
+                    <span class="location-count">14 servers</span>
+                </div>
+                <div class="location-card">
+                    <span class="location-flag">&#127464;&#127462;</span>
+                    <span class="location-name">Canada</span>
+                    <span class="location-count">9 servers</span>
+                </div>
+                <div class="location-card">
+                    <span class="location-flag">&#127462;&#127470;</span>
+                    <span class="location-name">Australia</span>
+                    <span class="location-count">6 servers</span>
+                </div>
+                <div class="location-card">
+                    <span class="location-flag">&#127463;&#127479;</span>
+                    <span class="location-name">France</span>
+                    <span class="location-count">10 servers</span>
+                </div>
+                <div class="location-card">
+                    <span class="location-flag">&#127473;&#127481;</span>
+                    <span class="location-name">Singapore</span>
+                    <span class="location-count">5 servers</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <span class="logo-icon">&#9670;</span>
+                    Nexus<span class="logo-highlight">VPN</span>
+                </a>
+                <p>&#169; 2024 NexusVPN. All rights reserved.<br>Your privacy matters.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Product</h4>
+                    <a href="#">Features</a>
+                    <a href="#">Pricing</a>
+                    <a href="#">Locations</a>
+                    <a href="#">Speed Test</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="#">About</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Press</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Support</h4>
+                    <a href="#">Help Center</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
